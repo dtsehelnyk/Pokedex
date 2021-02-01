@@ -1,10 +1,9 @@
 import React, { useState, useEffect, useContext } from 'react';
+import './Card.scss';
 import classNames from 'classnames';
 
 import { Context } from '../../context';
 import { getData } from '../../api';
-
-import './Card.scss';
 
 export const Card = ({ url, name, index }) => {
   const [ currentAbilities, setAbilities ] = useState([]);
@@ -12,16 +11,16 @@ export const Card = ({ url, name, index }) => {
 
   const { handleCard } = useContext(Context);
 
-  const getAbilities = async () => {
-    const pokemonFromServer = await getData(url);
-
-    setPokemon(pokemonFromServer);
-    setAbilities(pokemonFromServer.abilities);
-  };
-
   useEffect(() => {
+    const getAbilities = async () => {
+      const pokemonFromServer = await getData(url);
+  
+      setPokemon(pokemonFromServer);
+      setAbilities(pokemonFromServer.abilities);
+    };
+
     getAbilities();
-  }, []);
+  }, [url]);
 
   return (
     <div className="Card">

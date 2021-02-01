@@ -15,7 +15,7 @@ export const Details = ({ activeCard }) => {
 
           <h2 className="Details__title">
             {activeCard.name}
-            {' #'+`${activeCard.id}`.padStart(3, '0')}
+            {' #' + `${activeCard.id}`.padStart(3, '0')}
           </h2>
 
           <ul className="Details__list">
