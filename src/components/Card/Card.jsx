@@ -23,9 +23,11 @@ export const Card = ({ url, name, index }) => {
   }, [url]);
 
   return (
-    <div className="Card">
+    <div
+      className="Card"
+      onClick={() => handleCard(currentPokemon)}
+    >
       <img
-        onClick={() => handleCard(currentPokemon)}
         className="Card__image"
         src={`https://pokeres.bastionbot.org/images/pokemon/${index}.png`}
         alt={name}

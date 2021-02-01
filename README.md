@@ -1,3 +1,3 @@
 # Pokedex
 
-[Demo link](https://dtsehelnyk.github.io/_pokedex/)
+[Demo link](https://dtsehelnyk.github.io/Pokedex/)
