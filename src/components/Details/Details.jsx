@@ -4,7 +4,7 @@ import './Details.scss';
 export const Details = ({ activeCard }) => {
 
   return (
-    <div className="Details">
+    <aside className="Details">
       {!activeCard
         ? <span className="Details__question">?</span> 
         : <>
@@ -73,6 +73,6 @@ export const Details = ({ activeCard }) => {
             </ul>
           </>
       }
-    </div>
+    </aside>
   )
 }
