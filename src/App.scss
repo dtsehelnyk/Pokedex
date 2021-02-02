@@ -1,13 +1,21 @@
+@import './styles/mixins.scss';
+
 .App {
   margin: 0 auto;
-  padding: 40px;
+  padding: 40px 20px 80px;
   max-width: 1080px;
   font-family: monospace;
 
+  @include for-540 {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
   &__title {
     margin-bottom: 40px;
+    font-size: 56px;
     text-align: center;
-    color: rgb(0, 10, 27);
+    color: #fff;
   }
 
   &__main {

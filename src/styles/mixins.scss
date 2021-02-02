@@ -1,6 +1,5 @@
-@mixin font($font-size: null, $line-height: null, $color: null, $font-weight: null) {
-  font-size: $font-size;
-  line-height: $line-height;
-  color: $color;
-  font-weight: $font-weight;
+@mixin for-540 {
+  @media (max-width: 480px) {
+    @content;
+  }
 }

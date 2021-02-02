@@ -1,14 +1,19 @@
+@import '../../styles/mixins.scss';
+
 .Card {
   padding: 10px 10px 5px;
   background-color: #fff;
   border-radius: 5px;
   box-shadow: 2px 3px 6px 3px rgba($color: #333, $alpha: 0.3);
-
   transition: box-shadow 0.3s;
   cursor: pointer;
-  
+
   &:hover {
     box-shadow: 2px 3px 8px 5px rgba($color: #333, $alpha: 0.5);
+  }
+
+  @include for-540 {
+    padding: 10px 5px 0;
   }
 
   &__image {
@@ -43,13 +48,19 @@
     background-color: rgb(255, 175, 70);
     border: 1px solid #444;
 
+    @include for-540 {
+      padding: 5px 3px;
+      height: 24px;
+      border: 0;
+    }
+
     &:not(:last-of-type) {
       margin-right: 5px;
     }
 
-    &--overgrow {background-color: rgb(255, 137, 137)}
+    &--overgrow {background-color: rgb(250, 146, 146)}
     &--fire {background-color: rgb(255, 166, 0)}
-    &--poison {background-color: rgb(37, 255, 29)}
+    &--poison {background-color: rgb(134, 230, 130)}
     &--static {background-color: rgb(240, 255, 32)}
     &--grass {background-color: rgb(111, 255, 75)}
     &--electric {background-color: rgb(87, 255, 247)}

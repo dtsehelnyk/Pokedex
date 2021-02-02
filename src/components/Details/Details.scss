@@ -1,13 +1,31 @@
+@import '../../styles/mixins.scss';
+
 .Details {
   position: sticky;
   top: 20px;
   min-width: 240px;
   width: 240px;
-  min-height: 320px;
   padding: 10px;
   background-color: #fff;
   border-radius: 5px;
   box-shadow: 2px 3px 6px 3px rgba($color: #333, $alpha: 0.3);
+
+  @include for-540 {
+    top: 5px;
+    padding: 10px 5px 5px;
+    width: 50%;
+    min-width: 120px;
+  }
+
+  &__question {
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    height: 100%;
+    font-size: 312px;
+    color: rgb(165, 165, 165);
+    line-height: 1em;
+  }
 
   &__image {
     display: block;
@@ -33,7 +51,7 @@
     text-align: right;
   }
 
-  &__item {
+  &__stat {
     display: flex;
     justify-content: space-between;
     padding: 0 5px;
@@ -51,5 +69,9 @@
     &--speed {background-color: rgb(99, 231, 214)}
     &--weight {background-color: rgb(219, 130, 130)}
     &--moves {background-color: rgb(255, 166, 248)}
+
+    @include for-540 {
+      line-height: 1.4;
+    }
   }
 }

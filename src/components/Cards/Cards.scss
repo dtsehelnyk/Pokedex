@@ -1,12 +1,24 @@
+@import '../../styles/mixins.scss';
+
 .Cards {
   margin-right: 20px;
   width: 100%;
+
+  @include for-540 {
+    margin-right: 5px;
+    width: 50%;
+  }
 
   &__list {
     display: grid;
     grid-gap: 20px;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     margin-bottom: 20px;
+
+    @include for-540 {
+      grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+      grid-gap: 5px;
+    }
   }
 
   &__more {
@@ -15,8 +27,11 @@
     align-items: center;
     margin: 0 auto;
     width: 200px;
+    max-width: 100%;
     height: 50px;
-    background-color: rgb(250, 194, 91);
+    font-size: 20px;
+    color: #fff;
+    background-color: #4169e1;
     border: 0;
     border-radius: 3px;
     transition: opacity 0.3s;

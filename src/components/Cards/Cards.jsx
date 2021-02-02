@@ -21,16 +21,14 @@ export const Cards = () => {
     getPokemons();
   }, [cardsAmount]);
 
-  
-
   return (
     <div className="Cards">
       <ul className="Cards__list">
-        {cards.map((card, index) => (
+        {cards.map(card => (
           <Card
             url={card.url}
             name={card.name}
-            index={index + 1}
+            index={card.url.match(/\/pokemon\/(\d+)/)[1]}
             key={card.name}
           />
         ))}
@@ -43,7 +41,7 @@ export const Cards = () => {
         className="Cards__more"
         type="button"
       >
-        Show more
+        Load more
       </button>
     </div>
   )

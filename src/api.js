@@ -3,5 +3,3 @@ export const getData = async (url, amount = '') => {
 
   return data.json();
 }
-
-// export const limit = getData('https://pokeapi.co/api/v2/pokemon/?limit=', '12');
