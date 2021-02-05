@@ -1,0 +1,25 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: sans-serif;
+  background: linear-gradient(
+    90deg,
+    rgb(100, 183, 255) 0%,
+    rgb(154, 175, 255) 50%,
+    rgb(69, 229, 252) 100%);
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+h1,
+p {
+  margin: 0;
+}
