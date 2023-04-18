@@ -6,11 +6,11 @@ export const Details = ({ activeCard }) => {
   return (
     <aside className="Details">
       {!activeCard
-        ? <span className="Details__question">?</span> 
+        ? <span className="Details__question">?</span>
         : <>
             <img
               className="Details__image"
-              src={`https://pokeres.bastionbot.org/images/pokemon/${activeCard.id}.png`}
+              src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${activeCard.id}.svg`}
               alt={activeCard.name}
             />
 

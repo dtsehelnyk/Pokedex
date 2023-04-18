@@ -14,7 +14,7 @@ export const Card = ({ url, name, index }) => {
   useEffect(() => {
     const getAbilities = async () => {
       const pokemonFromServer = await getData(url);
-  
+
       setPokemon(pokemonFromServer);
       setAbilities(pokemonFromServer.abilities);
     };
@@ -29,7 +29,7 @@ export const Card = ({ url, name, index }) => {
     >
       <img
         className="Card__image"
-        src={`https://pokeres.bastionbot.org/images/pokemon/${index}.png`}
+        src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${index}.svg`}
         alt={name}
       />
       <h2 className="Card__title">
