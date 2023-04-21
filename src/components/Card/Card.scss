@@ -1,0 +1,95 @@
+@import '../../styles/mixins.scss';
+
+.Card {
+  padding: 10px 10px 5px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 2px 3px 6px 3px rgba($color: #333, $alpha: 0.3);
+  transition: box-shadow 0.3s;
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: 2px 3px 8px 5px rgba($color: #333, $alpha: 0.5);
+  }
+
+  @include for-540 {
+    padding: 10px 5px 0;
+  }
+
+  &__image {
+    display: block;
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+  }
+
+  &__title {
+    text-align: center;
+    color: royalblue;
+
+    &:first-letter {
+      text-transform: uppercase;
+    }
+  }
+
+  &__skills {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__skill {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5px;
+    padding: 5px 10px;
+    height: 32px;
+    font-size: 12px;
+    border-radius: 5px;
+    background-color: rgb(255, 175, 70);
+    border: 1px solid #444;
+
+    @include for-540 {
+      padding: 5px 3px;
+      height: 24px;
+      border: 0;
+    }
+
+    &:not(:last-of-type) {
+      margin-right: 5px;
+    }
+
+    &--overgrow {background-color: rgb(250, 146, 146)}
+    &--fire {background-color: rgb(255, 166, 0)}
+    &--poison {background-color: rgb(134, 230, 130)}
+    &--static {background-color: rgb(240, 255, 32)}
+    &--grass {background-color: rgb(111, 255, 75)}
+    &--electric {background-color: rgb(87, 255, 247)}
+    &--shield-dust {background-color: rgb(253, 234, 122)}
+    &--stench {background-color: rgb(245, 136, 255)}
+    &--drizzle {background-color: rgb(255, 91, 206)}
+    &--run-away {background-color: rgb(119, 174, 255)}
+    &--sturdy {background-color: rgb(141, 141, 141)}
+    &--damp {background-color: rgb(152, 206, 122)}
+    &--limber {background-color: rgb(119, 252, 196)}
+    &--chlorophyll {background-color: rgb(30, 255, 116)}
+    &--blaze {background-color: rgb(255, 83, 30)}
+    &--solar-power {background-color: rgb(255, 222, 35)}
+    &--torrent {background-color: rgb(86, 111, 255)}
+    &--rain-dish {background-color: rgb(91, 203, 255)}
+    &--compound-eyes {background-color: rgb(241, 172, 255)}
+    &--tinted-lens {background-color: rgb(198, 98, 255)}
+    &--shed-skin {background-color: rgb(193, 59, 255)}
+    &--swarm {background-color: rgb(255, 253, 128)}
+    &--sniper {background-color: rgb(168, 168, 168)}
+    &--keen-eye {background-color: rgb(149, 187, 99)}
+    &--tangled-feet {background-color: rgb(222, 166, 255)}
+    &--big-pecks {background-color: rgb(229, 255, 133)}
+    &--guts {background-color: rgb(255, 145, 145)}
+    &--hustle {background-color: rgb(199, 255, 126)}
+    &--intimidate {background-color: rgb(221, 86, 255)}
+    &--unnerve {background-color: rgb(255, 78, 78)}
+    &--lightning-rod {background-color: rgb(255, 242, 56)}
+    &--sand-rush {background-color: rgb(255, 245, 112)}
+  }
+}

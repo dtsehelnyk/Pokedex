@@ -1,0 +1,77 @@
+@import '../../styles/mixins.scss';
+
+.Details {
+  position: sticky;
+  top: 20px;
+  padding: 10px;
+  max-height: 100vh;
+  overflow-y: auto;
+  min-width: 240px;
+  width: 240px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 2px 3px 6px 3px rgba($color: #333, $alpha: 0.3);
+
+  @include for-540 {
+    top: 5px;
+    padding: 10px 5px 5px;
+    width: 50%;
+    min-width: 120px;
+  }
+
+  &__question {
+    display: flex;
+    justify-content: center;
+    font-size: 312px;
+    color: rgb(165, 165, 165);
+  }
+
+  &__image {
+    display: block;
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+  }
+
+  &__title {
+    text-align: center;
+    color: royalblue;
+
+    &:first-letter {
+      text-transform: uppercase;
+    }
+  }
+
+  &__list {
+    border-radius: 5px;
+    overflow: hidden;
+  }
+
+  &__inner-list {
+    text-align: right;
+  }
+
+  &__stat {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 5px;
+    color: rgb(0, 0, 0);
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 2em;
+
+    &--type {background-color: rgb(250, 195, 92)}
+    &--attack {background-color: rgb(174, 179, 255)}
+    &--defense {background-color: rgb(136, 255, 142)}
+    &--hp {background-color: rgb(255, 103, 103)}
+    &--sp-attack {background-color: rgb(255, 188, 149)}
+    &--sp-defense {background-color: rgb(107, 255, 126)}
+    &--speed {background-color: rgb(99, 231, 214)}
+    &--weight {background-color: rgb(219, 130, 130)}
+    &--moves {background-color: rgb(255, 166, 248)}
+
+    @include for-540 {
+      line-height: 1.4;
+    }
+  }
+}
